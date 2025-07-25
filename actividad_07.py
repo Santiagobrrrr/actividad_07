@@ -33,6 +33,12 @@ def multiples_3():
             count += 1
     print(f"La cantidad de multiplos de 3 es de: {count}\n")
 
+def area_rectangle(base_rectangle,height_rectagle):
+    return print(f"El área del rectangulo es de: {base_rectangle * height_rectagle}")
+
+def perimeter_rectangle(base_rectangle,height_rectagle):
+    return print(f"El perimetro del rectangulo es de: {(2*base_rectangle) + (2*height_rectagle)}")
+
 while True:
     print(f"MENÚ")
     print(f"1. SUMA - PROMEDIO - POSTITIVO , NEGATIVO o CEROS, MULTIPLOS DE 3")
@@ -78,6 +84,10 @@ while True:
 
         case "2":
             print(f"CALCULAR ÁREA Y PERIMETRO DE UN RECTÁNGULO")
+            base_rectangle = float(input(f"Ingrese la base del rectangulo: "))
+            height_rectangle = float(input(f"Ingrese la altura del rectangulo: "))
+            area_rectangle(base_rectangle,height_rectangle)
+            perimeter_rectangle(base_rectangle,height_rectangle)
 
         case "3":
             print(f"VERIFICACIÓN DE NUMERO PRIMO")

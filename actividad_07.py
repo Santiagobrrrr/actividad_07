@@ -123,6 +123,7 @@ while True:
 
         case "3":
             print(f"VERIFICACIÓN DE NUMERO PRIMO")
+            print(f"FUNCIÓN EN MANTENIMIENTO")
 
         case "4":
             print(f"PROMEDIO DE CALIFICACIONES, MAYOR A 85, EN RIESGO DE ZONA")

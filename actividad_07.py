@@ -6,10 +6,10 @@ def list_user():
         list_numbers.append(numbers_user)
 
 def sum_total():
-    return print(f"La suma de la lista es de: {sum(list_numbers)}\n")
+    return sum(list_numbers)
 
 def prom_list():
-    return print(f"El promedio es de {sum(list_numbers)/len(list_numbers)}\n")
+    return sum(list_numbers)/len(list_numbers)
 
 def positive_negative_zero():
     count_positive = 0
@@ -39,6 +39,20 @@ def area_rectangle(base_rectangle,height_rectagle):
 def perimeter_rectangle(base_rectangle,height_rectagle):
     return print(f"El perimetro del rectangulo es de: {(2*base_rectangle) + (2*height_rectagle)}")
 
+def greater_than_85():
+    count_greater_than_85 = 0
+    for i in list_numbers:
+        if i >= 85:
+            count_greater_than_85 += 1
+    return count_greater_than_85
+
+def less_than_60():
+    count_less_than_60 = 0
+    for i in list_numbers:
+        if i >0 and i <= 60:
+            count_less_than_60 += 1
+    return count_less_than_60
+
 while True:
     print(f"MENÚ")
     print(f"1. SUMA - PROMEDIO - POSTITIVO , NEGATIVO o CEROS, MULTIPLOS DE 3")
@@ -66,10 +80,10 @@ while True:
 
                 match option_number:
                     case "1":
-                        sum_total()
+                        print(f"La suma total es de {sum_total()}")
 
                     case "2":
-                        prom_list()
+                        print(f"El promedio es de {prom_list()}")
 
                     case "3":
                         positive_negative_zero()
@@ -95,6 +109,9 @@ while True:
         case "4":
             print(f"PROMEDIO DE CALIFICACIONES, MAYOR A 85, EN RIESGO DE ZONA")
             list_user()
+            print(f"El promedio de calificaciones es de: {prom_list()}")
+            print(f"Cantidad de notas mayores a 85: {greater_than_85()}")
+            print(f"Cantidad de notas en zona de riesgo: {less_than_60()}")
 
         case "5":
             print(f"VERIFICACIÓN DE NUMERO MAYOR O MENOR DE LISTA")
@@ -106,9 +123,6 @@ while True:
         case "7":
             print(f"Ha salido del programa, nos vemos...")
             break
-
-        case "8":
-            print(list_numbers)
 
         case _:
             print(f"Valor erroneo ingresado, intente de nuevo")

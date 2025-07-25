@@ -53,6 +53,12 @@ def less_than_60():
             count_less_than_60 += 1
     return count_less_than_60
 
+def max_num():
+    return max(list_numbers)
+
+def min_num():
+    return min(list_numbers)
+
 while True:
     print(f"MENÚ")
     print(f"1. SUMA - PROMEDIO - POSTITIVO , NEGATIVO o CEROS, MULTIPLOS DE 3")
@@ -111,11 +117,15 @@ while True:
             list_user()
             print(f"El promedio de calificaciones es de: {prom_list()}")
             print(f"Cantidad de notas mayores a 85: {greater_than_85()}")
-            print(f"Cantidad de notas en zona de riesgo: {less_than_60()}")
+            print(f"Cantidad de notas en zona de riesgo: {less_than_60()}\n")
+            list_numbers.clear()
 
         case "5":
             print(f"VERIFICACIÓN DE NUMERO MAYOR O MENOR DE LISTA")
             list_user()
+            print(f"El número mayor de la lista es de: {max_num()}")
+            print(f"El número menor de la lista es de: {min_num()}\n")
+            list_numbers.clear()
 
         case "6":
             print(f"CALCULADORA")
